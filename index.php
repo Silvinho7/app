@@ -5,13 +5,13 @@
   <title>silvio - underpost.net</title>
   <meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
   <meta name='viewport' content='width=device-width, user-scalable=no' />
-  <link rel='icon' href='/cloud/e_learning/silvio/favicon.ico' type='image/x-icon' />
-  <!-- <link rel='icon' href='/app/favicon.ico' type='image/x-icon' /> -->
+  <!--<link rel='icon' href='/cloud/e_learning/silvio/favicon.ico' type='image/x-icon' />-->
+  <link rel='icon' href='/app/favicon.ico' type='image/x-icon' />
   <script>
   <?php
 
-  $path = 'c:/dd/deploy_area/client';
-  // $path = 'c:/xampp/htdocs/client';
+  // $path = 'c:/dd/deploy_area/client';
+  $path = 'c:/xampp/htdocs/client';
 
   echo file_get_contents($path.'/vanilla.js');
   echo file_get_contents($path.'/util.js');
@@ -54,7 +54,7 @@
 
   ((()=>{
 
-    var path = '/cloud/e_learning/silvio';
+    var path = '/app';
 
     console.log('home init');
 
