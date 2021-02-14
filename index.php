@@ -35,6 +35,16 @@
 
   }
 
+  .slider-content {
+
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    background: gray;
+    overflow: hidden;
+
+  }
+
 
   </style>
 
@@ -71,7 +81,17 @@
 
     <br>
 
-    <img class='in imagen-ghost' src='`+path+`/assets/ghost.jpg'>
+    <div class='in slider-content'>
+
+            <img class='abs center slider-0' src='`+path+`/assets/0.jpg'>
+
+            <img class='abs center slider-1' style='display: none;' src='`+path+`/assets/1.jpg'>
+
+            <img class='abs center slider-2' style='display: none;' src='`+path+`/assets/2.PNG'>
+
+            <img class='abs center slider-3' style='display: none;' src='`+path+`/assets/3.PNG'>
+
+    </div>
 
     <br>
 
@@ -131,6 +151,26 @@
     setInterval(function(e){
       rr();
     }, 100);
+
+    let in_slider = 0;
+
+    setInterval(function(){
+
+      fadeOut(s('.slider-'+in_slider));
+
+      in_slider++;
+
+      if(in_slider==4){
+
+        in_slider = 0;
+
+      }
+
+      fadeIn(s('.slider-'+in_slider));
+
+    }, 1000);
+
+
 
   })());
 
