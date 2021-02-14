@@ -2,14 +2,16 @@
 <html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>app silvio</title>
+  <title>silvio - underpost.net</title>
   <meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
   <meta name='viewport' content='width=device-width, user-scalable=no' />
-  <link rel='icon' href='/app/favicon.ico' type='image/x-icon' />
+  <link rel='icon' href='/cloud/e_learning/silvio/favicon.ico' type='image/x-icon' />
+  <!-- <link rel='icon' href='/app/favicon.ico' type='image/x-icon' /> -->
   <script>
   <?php
 
-  $path = 'c:/xampp/htdocs/client';
+  $path = 'c:/dd/deploy_area/client';
+  // $path = 'c:/xampp/htdocs/client';
 
   echo file_get_contents($path.'/vanilla.js');
   echo file_get_contents($path.'/util.js');
@@ -27,7 +29,7 @@
 
   .imagen-ghost {
 
-    width: 300px;
+    width: 95%;
     height: auto;
     margin: auto;
 
@@ -41,6 +43,8 @@
   <script type="text/javascript">
 
   ((()=>{
+
+    var path = '/cloud/e_learning/silvio';
 
     console.log('home init');
 
@@ -67,21 +71,23 @@
 
     <br>
 
-    <img class='in imagen-ghost' src='/app/assets/ghost.jpg'>
+    <img class='in imagen-ghost' src='`+path+`/assets/ghost.jpg'>
+
+    <br>
+
+    <br>
+
+    <div class='in' style='text-align: center;'>
+
+      <a style='color: white; text-decoration: none;' href='https://underpost.net'>Powered By <b>UNDER</b>post.net</a>
+
+    </div>
+
+    <br>
 
     <br>
 
     `);
-
-
-
-    s('body').overflowY = 'auto';
-
-
-
-
-
-
 
     function rr(){
 
