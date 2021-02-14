@@ -27,24 +27,45 @@
   ?>
 
 
-  .imagen-ghost {
+  .imagen-slider {
 
-    width: 95%;
-    height: auto;
-    margin: auto;
+    width: 100%;
 
   }
 
   .slider-content {
 
     width: 80%;
-    height: 600px;
+    height: 50%;
     margin: auto;
     background: gray;
     overflow: hidden;
 
   }
 
+.black-content {
+
+    width: 60%;
+    color: black;
+    text-align: center;
+    padding: 10%;
+    margin: auto;
+    font-weight: bold;
+    background: linear-gradient(red, yellow);
+
+}
+
+
+.txt-slider {
+
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+
+}
 
   </style>
 
@@ -62,18 +83,8 @@
 
     <br>
 
-    <div class='in' style='
+    <div class='in black-content'>
 
-    width: 85%;
-    background: yellow;
-    color: black;
-    text-align: center;
-    padding: 5%;
-    margin: auto;
-    font-weight: bold;
-    background-image: linear-gradient(red, yellow);
-
-    '>
 
       <i>APP SILVIO v1.0</i>
 
@@ -83,13 +94,21 @@
 
     <div class='in slider-content'>
 
-            <img class='abs center slider-0' src='`+path+`/assets/0.jpg'>
+            <img class='abs center imagen-slider slider-0' src='`+path+`/assets/0.jpg'>
 
-            <img class='abs center slider-1' style='display: none;' src='`+path+`/assets/1.jpg'>
+            <img class='abs center imagen-slider slider-1' style='display: none;' src='`+path+`/assets/1.jpg'>
 
-            <img class='abs center slider-2' style='display: none;' src='`+path+`/assets/2.PNG'>
+            <img class='abs center imagen-slider slider-2' style='display: none;' src='`+path+`/assets/2.PNG'>
 
-            <img class='abs center slider-3' style='display: none;' src='`+path+`/assets/3.PNG'>
+            <img class='abs center imagen-slider slider-3' style='display: none;' src='`+path+`/assets/3.PNG'>
+
+
+
+            <div  class='abs txt-slider'>
+
+              APP SILVIO
+
+            </div>
 
     </div>
 
@@ -153,7 +172,7 @@
     }, 100);
 
     let in_slider = 0;
-
+    let array_background = ['rgba(50, 86, 148, 0.62)','rgb(125, 166, 58, 0.62)','rgb(99, 7, 99, 0.62)', 'rgba(205, 230, 6, 0.56)'];
     setInterval(function(){
 
       fadeOut(s('.slider-'+in_slider));
@@ -165,6 +184,8 @@
         in_slider = 0;
 
       }
+
+      s('.txt-slider').style.background = array_background[in_slider];
 
       fadeIn(s('.slider-'+in_slider));
 
