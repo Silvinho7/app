@@ -5,8 +5,8 @@
   <title>silvio - underpost.net</title>
   <meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
   <meta name='viewport' content='width=device-width, user-scalable=no' />
-  <!--<link rel='icon' href='/cloud/e_learning/silvio/favicon.ico' type='image/x-icon' />-->
-  <link rel='icon' href='/app/favicon.ico' type='image/x-icon' />
+  <!-- <link rel='icon' href='/cloud/e_learning/silvio/favicon.ico' type='image/x-icon' /> -->
+  <link rel='icon' href='/app/favicon.ico' type='image/x-icon' />-->
   <script>
   <?php
 
@@ -75,6 +75,7 @@
 
   ((()=>{
 
+    // var path = '/cloud/e_learning/silvio';
     var path = '/app';
 
     console.log('home init');
@@ -172,7 +173,7 @@
     }, 100);
 
     let in_slider = 0;
-    let array_background = ['rgba(50, 86, 148, 0.62)','rgb(125, 166, 58, 0.62)','rgb(99, 7, 99, 0.62)', 'rgba(205, 230, 6, 0.56)'];
+    let array_background = ['rgba(50, 86, 148, 0.62)','rgba(125, 166, 58, 0.62)','rgba(99, 7, 99, 0.62)', 'rgba(205, 230, 6, 0.56)'];
     setInterval(function(){
 
       fadeOut(s('.slider-'+in_slider));
