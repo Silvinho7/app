@@ -6,7 +6,7 @@
   <meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
   <meta name='viewport' content='width=device-width, user-scalable=no' />
   <!-- <link rel='icon' href='/cloud/e_learning/silvio/favicon.ico' type='image/x-icon' /> -->
-  <link rel='icon' href='/app/favicon.ico' type='image/x-icon' />-->
+  <link rel='icon' href='/app/favicon.ico' type='image/x-icon' />
   <script>
   <?php
 
