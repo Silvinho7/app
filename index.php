@@ -46,12 +46,13 @@
 .black-content {
 
     width: 60%;
-    color: black;
+    color: white;
     text-align: center;
     padding: 10%;
     margin: auto;
     font-weight: bold;
-    background: linear-gradient(red, yellow);
+    background: linear-gradient(blue, green);
+    font-size: 460%;
 
 }
 
@@ -64,6 +65,27 @@
   font-size: 20px;
   color: white;
   font-weight: bold;
+
+}
+
+.video-youtube {
+
+  margin: auto;
+  width: 80%;
+  height: 50%;
+  border: none;
+
+}
+
+
+.audio-Bbng {
+
+  margin: auto;
+  width: 80%;
+  /* display: none; */
+
+
+
 
 }
 
@@ -113,6 +135,28 @@
 
     </div>
 
+
+    <br>
+
+
+
+    <audio controls autoplay class='in audio-Bbng'>
+
+
+  <source src="`+path+`/assets/Audio/Bbng.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+
+</audio>
+
+    <br>
+
+    <iframe class='in video-youtube'
+    src="https://www.youtube.com/embed/l0vrsO3_HpU"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+    </iframe>
+
     <br>
 
     <br>
@@ -146,7 +190,10 @@
 
         }
 
-        console.log('movil -> '+data.movil);
+      console.log('movil -> '+data.movil);
+
+      /* comentario de mas de una
+      linea */
 
         //--------------------------------------------------------------------------
         //--------------------------------------------------------------------------
