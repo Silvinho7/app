@@ -85,6 +85,50 @@
 
 
         },
+        setRangeBall(){
+
+          let xcord = 8;
+          let ycord = 8;
+          let range_ball = 3;
+
+          let cord_test_atk = [
+					   [(xcord),(ycord)]
+				  ];
+
+  				for(let i_range=1;i_range<=range_ball;i_range++){
+
+  					for(let ii_range=1;ii_range<=range_ball;ii_range++){
+
+  						cord_test_atk.push([(xcord-i_range),(ycord-ii_range)]);
+  						cord_test_atk.push([(xcord+i_range),(ycord-ii_range)]);
+  						cord_test_atk.push([(xcord-i_range),(ycord+ii_range)]);
+  						cord_test_atk.push([(xcord+i_range),(ycord+ii_range)]);
+
+  						cord_test_atk.push([(xcord),(ycord+ii_range)]);
+  						cord_test_atk.push([(xcord),(ycord-ii_range)]);
+
+  					}
+
+  					cord_test_atk.push([(xcord+i_range),(ycord)]);
+  					cord_test_atk.push([(xcord-i_range),(ycord)]);
+
+  				}
+
+          for(let cords of cord_test_atk){
+
+            data.users.push({
+
+              name: 'pelota',
+              x: cords[0],
+              y: cords[1],
+              background: 'red'
+
+            });
+
+          }
+
+
+        },
         setPostRandom: function(){
 
           for(let user_index of data.users){
@@ -146,8 +190,9 @@
 
     `);
 
-    data.render.setMultiBall(15);
-    data.render.setPostRandom();
+    // data.render.setMultiBall(15);
+    // data.render.setPostRandom();
+    data.render.setRangeBall();
     data.render.appendBall();
 
     //----------------------------------------------------------------
